@@ -9,3 +9,8 @@ Route::get('/', function () {
 Route::get('/demo',function(){
     return view('demo');
 });
+
+// route with data ...
+Route::get('demo/{name}',function($name){
+    echo $name;
+});
