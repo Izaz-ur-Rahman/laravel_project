@@ -15,5 +15,5 @@ Route::get('demo/{name}/{id}',function($name,$id= null){
     // echo $name;
    // echo $id;
     $data = compact('name','id');
-    print_r($data);
+    return view('demo')->with($data);
 });
