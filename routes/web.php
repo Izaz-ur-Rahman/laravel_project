@@ -11,6 +11,9 @@ Route::get('/demo',function(){
 });
 
 // route with data ...
-Route::get('demo/{name}',function($name){
-    echo $name;
+Route::get('demo/{name}/{id}',function($name,$id= null){
+    // echo $name;
+   // echo $id;
+    $data = compact('name','id');
+    print_r($data);
 });
