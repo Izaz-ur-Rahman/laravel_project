@@ -11,6 +11,6 @@ class SingleActionController extends Controller
      */
     public function __invoke(Request $request)
     {
-        //
+       return view('course');
     }
 }

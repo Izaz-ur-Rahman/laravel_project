@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\CssSelector\Node\FunctionNode;
 use App\Http\Controllers\DemoController;
+use App\Http\Controllers\SingleActionController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -39,3 +40,5 @@ Route::get('/',[DemoController::class,'index']); // first method for calling con
 Route::get('about','App\Http\Controllers\DemoController@about'); //2nd method
 
 // Route::get('about','DemoController@about'); //3rd old laravel method for calling controller functions
+
+Route::get('/courses',SingleActionController::class);
