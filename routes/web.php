@@ -28,3 +28,9 @@ Route::get('/',function(){
 Route::get('/about',function(){
     return view('about');
 });
+
+
+
+Route::get('/course',function(){
+    return view('course');
+});

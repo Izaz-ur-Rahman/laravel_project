@@ -3,7 +3,6 @@
     <title>Home</title>
 @endpush
 @section('main-section')
-<h1 style="text-align: center">
-    home page
-</h1>
+
+<h1>course page</h1>
 @endsection
