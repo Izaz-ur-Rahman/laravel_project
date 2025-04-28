@@ -4,6 +4,6 @@
 @endpush
 @section('main-section')
 <h1 style="text-align: center">
-    home page
+    home page is called from controller
 </h1>
 @endsection

@@ -35,4 +35,7 @@ use App\Http\Controllers\DemoController;
 // Route::get('/course',function(){
 //     return view('course');
 // });
-Route::get('/',[DemoController::class,'index']);
+Route::get('/',[DemoController::class,'index']); // first method for calling contoller function
+Route::get('about','App\Http\Controllers\DemoController@about'); //2nd method
+
+// Route::get('about','DemoController@about'); //3rd old laravel method for calling controller functions
