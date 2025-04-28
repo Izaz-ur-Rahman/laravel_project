@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>header</title>
 </head>
+<nav>
+    <a href="">Home</a>
+    <a href="">about us</a>
+</nav>
 <body>
 
 </body>
-<footer>
-    all right reserved 2025...
-</footer>
-</html>
