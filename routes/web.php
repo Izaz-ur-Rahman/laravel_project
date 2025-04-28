@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\CssSelector\Node\FunctionNode;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -18,8 +19,12 @@ use Illuminate\Support\Facades\Route;
 //     return view('demo')->with($data);
 // });
 
-Route::get('/{name?}',function($name= null){
-    $data = compact('name');
-return  view('home')->with($data);
+
+Route::get('/',function(){
+    return view('home');
 });
 
+
+Route::get('/about',function(){
+    return view('about');
+});
