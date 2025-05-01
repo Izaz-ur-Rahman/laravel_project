@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Symfony\Component\CssSelector\Node\FunctionNode;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\SingleActionController;
-
+use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\RegistrationController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -42,3 +43,9 @@ Route::get('about','App\Http\Controllers\DemoController@about'); //2nd method
 // Route::get('about','DemoController@about'); //3rd old laravel method for calling controller functions
 
 Route::get('/courses',SingleActionController::class);
+
+// invoking the resourse controlling here below
+
+Route::resource('photo','PhotoController::class');
+
+Route::get('/form',[RegistrationController::class,'form']);
