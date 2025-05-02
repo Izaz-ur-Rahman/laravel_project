@@ -10,7 +10,8 @@
 <body>
     <div class="container">
         <h1 class="text-center">Registration</h1>
-        <form method="post">
+        <form method="post" action="{{url('/')}}/register">
+          @csrf
             <div class="form-group">
                 <label for="exampleInputPassword1">Name</label>
                 <input type="text" name="name" class="form-control" id="exampleInputName" placeholder="Name">
