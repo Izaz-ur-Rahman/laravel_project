@@ -12,6 +12,12 @@
         <h1 class="text-center">Registration</h1>
         <form method="post" action="{{url('/')}}/register">
           @csrf
+          <pre>
+
+          @php
+            print_r($errors->all());
+          @endphp
+          </pre>
             <div class="form-group">
                 <label for="exampleInputPassword1">Name</label>
                 <input type="text" name="name" class="form-control" id="exampleInputName" placeholder="Name">
