@@ -49,4 +49,4 @@ Route::get('/courses',SingleActionController::class);
 Route::resource('photo','PhotoController::class');
 
 Route::get('/form',[RegistrationController::class,'form']);
-Route::post('/form',[RegistrationController::class,'register']);
+Route::post('/register',[RegistrationController::class,'register']);

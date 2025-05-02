@@ -10,6 +10,7 @@ class RegistrationController extends Controller
         return view('form');
     }
     public function register(Request $request){
+        echo "<pre>";
             print_r($request->all());
     }
 }
