@@ -1,3 +1,10 @@
-<div>
-    <!-- Very little is needed to make a happy life. - Marcus Aurelius -->
-</div>
+
+<div class="form-group">
+    <label for="exampleInputPassword1">{{$label}}</label>
+    <input type="{{$type}}" name="{{$name}}" class="form-control" id="exampleInputName" placeholder="Name" value="{{ old('name') }}">
+    <span class="text-danger">
+      <!-- @error('name')
+      {{ $message }}
+      @enderror -->
+    </span>
+  </div>
