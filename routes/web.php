@@ -6,6 +6,7 @@ use App\Http\Controllers\DemoController;
 use App\Http\Controllers\SingleActionController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\RegistrationController;
+use App\Models\Customers;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -50,3 +51,9 @@ Route::resource('photo','PhotoController::class');
 
 Route::get('/form',[RegistrationController::class,'form']);
 Route::post('/register',[RegistrationController::class,'register']);
+
+Route::get('/customers',function(){
+    $customer = Customers::all();
+      echo  "<pre>";
+        print_r($customer->toArray());
+});
