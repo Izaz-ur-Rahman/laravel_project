@@ -14,7 +14,7 @@
           @csrf
             <x-input type="text" name="name" label="Enter your Name"/>
             <x-input type="email" name="email" label="Enter your email"/>
-            <x-input type="password" name="password" label="Enter your Password"/>
+            <x-input type="password" name="pass" label="Enter your Password"/>
 
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
