@@ -12,11 +12,18 @@ class CustomerController extends Controller
    public function store(Request $request){
         echo "<pre>";
         print_r($request->all()); // This stops execution and dumps input data
-      //   $customer = new Customers;
-      //   $customer->name = $request['name'];
-      //   $customer->email  = $request['email'];
-      //   $customer->password = $request['pass'];
-      //   $customer->save();
+        echo "code is running";
+        // insert query
+        $customer = new Customers;
+        $customer->name = $request['name'];
+        $customer->email  = $request['email'];
+        $customer->password = $request['pass'];
+        $customer->save();
+         return  redirect('/customer/view');
+   }
 
+   function view(){
+      $customer = Customers::all()
+      return view('customer-view');
    }
 }

@@ -12,9 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('customers', function (Blueprint $table) {
-             $table->string('country',50)->nullable()->after('address');
-            $table->string('state',50)->nullable()->after('address');
-         
+            $table->date('dob')->nullable()->change();
+
         });
     }
 
@@ -24,6 +23,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('customers', function (Blueprint $table) {
+            $table->date('dob')->default('0000-00-00')->change(); // Or your previous state
 
         });
     }
