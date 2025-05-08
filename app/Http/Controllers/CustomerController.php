@@ -23,7 +23,8 @@ class CustomerController extends Controller
    }
 
    function view(){
-      $customer = Customers::all()
-      return view('customer-view');
+      $customers = Customers::all();
+      $data = compact('customers');
+      return view('customer-view')->with($data);
    }
 }
