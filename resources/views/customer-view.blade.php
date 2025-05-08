@@ -14,7 +14,7 @@
     <!-- Optional JavaScript -->
 <table class="table">
     <pre>
-        {{ print_r($customers) }}
+       
     </pre>
     <thead>
         <tr>
@@ -30,8 +30,8 @@
 
         <tr>
             <td>{{ $data->name }}</td>
-            <td></td>
-            <td></td>
+            <td>{{ $data->email }}</td>
+            <td>{{ $data->password }}</td>
         </tr>
         @endforeach
     </tbody>
