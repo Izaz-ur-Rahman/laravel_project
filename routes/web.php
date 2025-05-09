@@ -62,4 +62,4 @@ Route::post('/register',[RegistrationController::class,'register']);
 
 Route::get('/register', [CustomerController::class, 'index']);
 Route::get('/customer/view',[CustomerController::class,'view']);
-Route::post('/register', [CustomerController::class, 'store']);
+Route::post('/register', [CustomerController::class, 'store'])->name('customer.create');

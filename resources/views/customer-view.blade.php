@@ -14,13 +14,19 @@
     <!-- Optional JavaScript -->
 <table class="table">
     <pre>
-       
+
     </pre>
+ <!-- #region -->
+  <a href="{{ route('customer.create') }}">
+  <button class="btn btn-success">Add Customer</button>
+
+  </a>
     <thead>
         <tr>
             <th>Name</th>
             <th>email</th>
             <th>password</th>
+            <th>Action</th>
         </tr>
     </thead>
 
@@ -32,6 +38,9 @@
             <td>{{ $data->name }}</td>
             <td>{{ $data->email }}</td>
             <td>{{ $data->password }}</td>
+            <td>
+                <button class="btn btn-danger">Delete</button>
+            </td>
         </tr>
         @endforeach
     </tbody>
