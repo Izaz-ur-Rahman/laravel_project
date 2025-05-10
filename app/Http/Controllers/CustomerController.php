@@ -9,8 +9,11 @@ use Symfony\Component\CssSelector\Node\FunctionNode;
 class CustomerController extends Controller
 {
    public function index(){
+      $title = "Customer Registration Form";
+      $url = url('/register');
 
-    return view('form');
+      $data = compact('url');
+    return view('form')->with($data);
    }
    public function store(Request $request){
         echo "<pre>";
@@ -52,8 +55,8 @@ return redirect('/customer/view');
       }
       else{
          $url = url('/customer/update')."/".$id;
-         $data = compact('customer');
-         return redirect('form')->with($data);
+         $data = compact('customer','url');
+         return view('form')->with($data);
       }
    }
 }

@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <h1 class="text-center">Registration</h1>
-        <form method="post" action="{{url('/')}}/register">
+        <form method="post" action="{{ $url  }}">
           @csrf
             <x-input type="text" name="name" label="Enter your name "/>
             <x-input type="email" name="email" label="Enter your email "/>
