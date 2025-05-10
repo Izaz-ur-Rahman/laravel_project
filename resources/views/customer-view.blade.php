@@ -39,9 +39,11 @@
             <td>{{ $data->email }}</td>
             <td>{{ $data->password }}</td>
             <td>
-                <button class="btn btn-danger">Delete</button>
                 <button class="btn btn-primary">Edit</button>
+                <a href="{{ route('customer.delete') }}">
+                <button class="btn btn-danger">Delete</button>
 
+                </a>
             </td>
         </tr>
         @endforeach
