@@ -40,7 +40,7 @@
             <td>{{ $data->password }}</td>
             <td>
                 <button class="btn btn-primary">Edit</button>
-                <a href="{{ route('customer.delete') }}">
+                <a href="{{ uri('/customer/delete/') }}/{{ $data->id }}">
                 <button class="btn btn-danger">Delete</button>
 
                 </a>

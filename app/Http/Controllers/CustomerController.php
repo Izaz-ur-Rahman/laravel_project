@@ -15,6 +15,7 @@ class CustomerController extends Controller
       //   echo "code is running";
         // insert query
         $customer = new Customers;
+      //   $customer->id = $request->input('id');
         $customer->name = $request['name'];
         $customer->email  = $request['email'];
         $customer->password = $request['pass'];
@@ -29,6 +30,6 @@ class CustomerController extends Controller
    }
 
    public function delete(){
-      
+
    }
 }
