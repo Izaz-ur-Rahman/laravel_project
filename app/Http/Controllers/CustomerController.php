@@ -9,7 +9,7 @@ use Symfony\Component\CssSelector\Node\FunctionNode;
 class CustomerController extends Controller
 {
    public function index(){
-      $url = url('')
+
     return view('form');
    }
    public function store(Request $request){
@@ -53,7 +53,7 @@ return redirect('/customer/view');
       else{
          $url = url('/customer/update')."/".$id;
          $data = compact('customer');
-         return redirect('customer')->with($data);
+         return redirect('form')->with($data);
       }
    }
 }
