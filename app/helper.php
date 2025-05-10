@@ -1,13 +1,19 @@
 <?php
 
-
 // important function
 
-if(!function_exists('p'){
-    function p($data){
+if (!function_exists('p')) {
+    function p($data) {
         echo "<pre>";
         print_r($data);
-        echo "<pre>";
+        echo "</pre>"; // ← this should be </pre> not <pre>
+    }
+}
 
+
+if(!function_exists('get_formatted_date'){
+    function get_formatted_date($date,$format){
+        $formattedDate= date($format,strtotime($date));
+        return $formattedDate;
     }
 })

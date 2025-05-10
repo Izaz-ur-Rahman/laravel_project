@@ -63,6 +63,7 @@ return redirect('/customer/view');
    }
 
    public function update($id,Request $request){
+      p($request->all());
       $customer = Customers::find($id);
       $customer->name = $request['name'];
       $customer->email  = $request['email'];
