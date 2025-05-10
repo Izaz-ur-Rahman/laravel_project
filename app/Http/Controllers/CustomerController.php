@@ -61,4 +61,12 @@ return redirect('/customer/view');
          return view('form')->with($data);
       }
    }
+
+   public function update($id,Request $request){
+      $customer = Customers::find($id);
+      $customer->name = $request['name'];
+      $customer->email  = $request['email'];
+      $customer->save();
+      return redirect('/customer/view');
+   }
 }
