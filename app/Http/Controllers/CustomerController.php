@@ -29,7 +29,13 @@ class CustomerController extends Controller
       return view('customer-view')->with($data);
    }
 
-   public function delete(){
+   public function delete($id){
 
+$customer = Customers::find($id);
+if(!is_null($customer)){
+   $customer->delete();
+
+}
+return redirect('/customer/view');
    }
 }

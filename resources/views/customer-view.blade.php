@@ -40,10 +40,17 @@
             <td>{{ $data->password }}</td>
             <td>
                 <button class="btn btn-primary">Edit</button>
-                <a href="{{ uri('/customer/delete/') }}/{{ $data->id }}">
+                <!-- this url metthod used and perform the delete operation
+                 <a href="{{ url('/customer/delete/') }}/{{ $data->id }}">
+                <button class="btn btn-danger">Delete</button>
+
+                </a> -->
+                <!---    this is route name method for delete operation                  --->
+                <a href="{{ route('customer.delete', ['id'=> $data->id]) }}">
                 <button class="btn btn-danger">Delete</button>
 
                 </a>
+
             </td>
         </tr>
         @endforeach
