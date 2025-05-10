@@ -9,10 +9,10 @@ use Symfony\Component\CssSelector\Node\FunctionNode;
 class CustomerController extends Controller
 {
    public function index(){
-      $title = "Customer Registration Form";
+         $title = "Customer Registration Form";
       $url = url('/register');
 
-      $data = compact('url');
+      $data = compact('url','title');
     return view('form')->with($data);
    }
    public function store(Request $request){
@@ -54,8 +54,10 @@ return redirect('/customer/view');
 
       }
       else{
+         $title = "Update Customer detail Form";
+
          $url = url('/customer/update')."/".$id;
-         $data = compact('customer','url');
+         $data = compact('customer','url','title');
          return view('form')->with($data);
       }
    }
