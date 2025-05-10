@@ -12,7 +12,7 @@ class CustomerController extends Controller
    public function store(Request $request){
         echo "<pre>";
         print_r($request->all()); // This stops execution and dumps input data
-        echo "code is running";
+      //   echo "code is running";
         // insert query
         $customer = new Customers;
         $customer->name = $request['name'];
@@ -22,9 +22,13 @@ class CustomerController extends Controller
          return  redirect('/customer/view');
    }
 
-   function view(){
+   public function view(){
       $customers = Customers::all();
       $data = compact('customers');
       return view('customer-view')->with($data);
+   }
+
+   public function delete(){
+      
    }
 }

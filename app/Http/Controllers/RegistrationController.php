@@ -15,7 +15,7 @@ class RegistrationController extends Controller
             'email' => 'required|email',
             'pass' => 'required',
         ]);
-        echo "<pre>";
-            print_r($request->all());
+        // echo "<pre>";
+        //     print_r($request->all());
     }
 }

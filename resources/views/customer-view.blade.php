@@ -40,6 +40,8 @@
             <td>{{ $data->password }}</td>
             <td>
                 <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-primary">Edit</button>
+
             </td>
         </tr>
         @endforeach
