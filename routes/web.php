@@ -80,3 +80,8 @@ Route::get('set-session',function(Request $request){
         $request->session()->put('id','123');
         return redirect('get-all-session');
 });
+Route::get('delete-session',function(Request $request){
+   session()->forget('name');
+   session()->forget('id');
+    return redirect('get-all-session');
+});
