@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\CssSelector\Node\FunctionNode;
 use App\Http\Controllers\DemoController;
@@ -8,6 +9,8 @@ use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\CustomerController;
 use App\Models\Customers;
+
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -69,4 +72,11 @@ Route::post('/register', [CustomerController::class, 'store'])->name('customer.c
 
 Route::get('get-all-session',function(){
         $session = session()->all();
+        p($session);
+});
+
+Route::get('set-session',function(Request $request){
+        $request->session()->put('name','IZAZ UR RAHMAN');
+        $request->session()->put('id','123');
+        return redirect('get-all-session');
 });
