@@ -66,3 +66,7 @@ Route::get('/customer/delete/{id}',[CustomerController::class,'delete'])->name('
 Route::get('/customer/edit/{id}',[CustomerController::class,'edit'])->name('customer.edit');
 Route::post('/customer/update/{id}',[CustomerController::class,'update'])->name('customer.update');
 Route::post('/register', [CustomerController::class, 'store'])->name('customer.create');
+
+Route::get('get-all-session',function(){
+        $session = session()->all();
+});
