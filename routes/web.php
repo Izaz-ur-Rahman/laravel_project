@@ -64,10 +64,23 @@ Route::post('/register',[RegistrationController::class,'register']);
 
 
 Route::get('/register', [CustomerController::class, 'index']);
+
+
 Route::get('/customer/view',[CustomerController::class,'view']);
+
+
+Route::get('/customer/trash',[CustomerController::class,'trash']);
+
+
 Route::get('/customer/delete/{id}',[CustomerController::class,'delete'])->name('customer.delete');
+
+
 Route::get('/customer/edit/{id}',[CustomerController::class,'edit'])->name('customer.edit');
+
+
 Route::post('/customer/update/{id}',[CustomerController::class,'update'])->name('customer.update');
+
+
 Route::post('/register', [CustomerController::class, 'store'])->name('customer.create');
 
 Route::get('get-all-session',function(){
@@ -80,8 +93,11 @@ Route::get('set-session',function(Request $request){
         $request->session()->put('id','123');
         return redirect('get-all-session');
 });
+
+
 Route::get('delete-session',function(Request $request){
    session()->forget('name');
    session()->forget('id');
     return redirect('get-all-session');
 });
+

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Customer-Trash</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,6 +16,7 @@
     <pre>
 
     </pre>
+    <h3 class="text-center text-uppercase bg-success">Trash Date are Here</h3>
  <!-- #region -->
   <a href="{{ route('customer.create') }}">
   <button class="btn btn-success">Add Customer</button>

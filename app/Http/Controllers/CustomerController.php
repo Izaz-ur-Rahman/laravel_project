@@ -37,6 +37,12 @@ class CustomerController extends Controller
       return view('customer-view')->with($data);
    }
 
+   public function trash(){
+      // select query are here
+      $customers = Customers::onlyTrashed()->all();
+      $data = compact('customers');
+      return view('customer-trash')->with($data);
+   }
    public function delete($id){
 // delete query are here4
 $customer = Customers::find($id);
