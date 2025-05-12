@@ -19,6 +19,9 @@
  <!-- #region -->
   <a href="{{ route('customer.create') }}">
   <button class="btn btn-success">Add Customer</button>
+  </a>
+  <a href="{{ route('customer.trash') }}">
+  <button class="btn btn-secondary">Go To Trash</button>
 
   </a>
     <thead>

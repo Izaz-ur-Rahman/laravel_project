@@ -69,7 +69,7 @@ Route::get('/register', [CustomerController::class, 'index']);
 Route::get('/customer/view',[CustomerController::class,'view']);
 
 
-Route::get('/customer/trash',[CustomerController::class,'trash']);
+Route::get('/customer/trash',[CustomerController::class,'trash'])->name('customer.trash');
 
 
 Route::get('/customer/delete/{id}',[CustomerController::class,'delete'])->name('customer.delete');

@@ -39,7 +39,7 @@ class CustomerController extends Controller
 
    public function trash(){
       // select query are here
-      $customers = Customers::onlyTrashed()->all();
+      $customers = Customers::onlyTrashed()->get();
       $data = compact('customers');
       return view('customer-trash')->with($data);
    }
