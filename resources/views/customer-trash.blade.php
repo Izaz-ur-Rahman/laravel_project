@@ -22,6 +22,10 @@
   <button class="btn btn-success">Add Customer</button>
 
   </a>
+  <a href="{{url('customer/view') }}">
+    <button class="btn btn-secondary border-r-cyan-100">Customer View</button>
+
+    </a>
     <thead>
         <tr>
             <th>Name</th>
@@ -41,7 +45,7 @@
             <td>{{ $data->password }}</td>
             <td>
 
-              <a href="{{ route('customer.edit', ['id'=> $data->id] )}}">  <button class="btn btn-primary">Restore</button>
+              <a href="{{ route('customer.restore', ['id'=> $data->id] )}}">  <button class="btn btn-primary">Restore</button>
             </a>
                 <!-- this url metthod used and perform the delete operation
                  <a href="{{ url('/customer/delete/') }}/{{ $data->id }}">
