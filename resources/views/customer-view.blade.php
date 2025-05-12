@@ -49,7 +49,7 @@
                 </a> -->
                 <!---    this is route name method for delete operation                  --->
                 <a href="{{ route('customer.delete', ['id'=> $data->id]) }}">
-                <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-danger">Move to Trash</button>
 
                 </a>
 
