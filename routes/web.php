@@ -74,6 +74,8 @@ Route::get('/customer/trash',[CustomerController::class,'trash'])->name('custome
 
 Route::get('/customer/delete/{id}',[CustomerController::class,'delete'])->name('customer.delete');
 
+Route::get('/customer/restore/{id}',[CustomerController::class,'restore'])->name('customer.restore');
+
 
 Route::get('/customer/edit/{id}',[CustomerController::class,'edit'])->name('customer.edit');
 
