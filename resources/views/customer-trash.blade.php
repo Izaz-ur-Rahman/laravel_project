@@ -40,7 +40,7 @@
             <td>{{ $data->password }}</td>
             <td>
 
-              <a href="{{ route('customer.edit', ['id'=> $data->id] )}}">  <button class="btn btn-primary">Edit</button>
+              <a href="{{ route('customer.edit', ['id'=> $data->id] )}}">  <button class="btn btn-primary">Restore</button>
             </a>
                 <!-- this url metthod used and perform the delete operation
                  <a href="{{ url('/customer/delete/') }}/{{ $data->id }}">
@@ -49,7 +49,7 @@
                 </a> -->
                 <!---    this is route name method for delete operation                  --->
                 <a href="{{ route('customer.delete', ['id'=> $data->id]) }}">
-                <button class="btn btn-danger">Move to Trash</button>
+                <button class="btn btn-danger">Delete</button>
 
                 </a>
 
