@@ -47,6 +47,8 @@
 
               <a href="{{ route('customer.restore', ['id'=> $data->id] )}}">  <button class="btn btn-primary">Restore</button>
             </a>
+            <a href="{{ route('customer.force-delete', ['id'=> $data->id] )}}">  <button class="btn btn-warning">Permanent Delete</button>
+            </a>
                 <!-- this url metthod used and perform the delete operation
                  <a href="{{ url('/customer/delete/') }}/{{ $data->id }}">
                 <button class="btn btn-danger">Delete</button>

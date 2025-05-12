@@ -62,6 +62,17 @@ return redirect('/customer/view');
       }
       return redirect('/customer/view');
          }
+
+         // to delete permonently
+         public function forceDelete($id){
+            // delete query are here4
+            $customer = Customers::withTrashed()->find($id);
+            if(!is_null($customer)){
+               $customer->forceDelete();
+
+            }
+            return redirect('/customer/view');
+               }
    public function edit($id){
       $customer = Customers::find($id);
       if(is_null($customer)){
