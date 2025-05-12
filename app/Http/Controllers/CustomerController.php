@@ -53,6 +53,15 @@ if(!is_null($customer)){
 return redirect('/customer/view');
    }
 
+   public function restore($id){
+      // delete query are here4
+      $customer = Customers::withTrashed()->find($id);
+      if(!is_null($customer)){
+         $customer->restore();
+
+      }
+      return redirect('/customer/view');
+         }
    public function edit($id){
       $customer = Customers::find($id);
       if(is_null($customer)){
