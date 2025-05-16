@@ -30,7 +30,7 @@ class CustomerController extends Controller
          return  redirect('/customer/view');
    }
 
-   public function view(){
+   public function view(Request $req){
       // select query are here
       $customers = Customers::all();
       $data = compact('customers');

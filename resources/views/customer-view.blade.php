@@ -17,6 +17,13 @@
 
     </pre>
  <!-- #region -->
+  <form action="">
+    <div class="form-group col-6">
+      <input type="search" name="search" placeholder="Search here by name or email" id="" class="form-control" >
+      <button  class="btn btn-primary m-4">search</button>
+
+    </div>
+  </form>
   <a href="{{ route('customer.create') }}">
   <button class="btn btn-success">Add Customer</button>
   </a>
