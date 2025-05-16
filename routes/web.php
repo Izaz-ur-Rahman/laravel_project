@@ -66,7 +66,7 @@ Route::post('/register',[RegistrationController::class,'register']);
 Route::get('/register', [CustomerController::class, 'index']);
 
 
-Route::get('/customer/view',[CustomerController::class,'view']);
+Route::get('/customer/view',[CustomerController::class,'view'])->name('customer.data');
 
 
 Route::get('/customer/trash',[CustomerController::class,'trash'])->name('customer.trash');

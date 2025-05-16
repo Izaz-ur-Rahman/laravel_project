@@ -12,23 +12,25 @@
   <body>
 
     <!-- Optional JavaScript -->
-<table class="table">
+<table class="table mx-5">
     <pre>
 
     </pre>
  <!-- #region -->
   <form action="">
-    <div class="form-group col-6">
-      <input type="search" name="search" placeholder="Search here by name or email" id="" class="form-control" value="{{ $search}}" >
-      <button  class="btn btn-primary m-4">search</button>
-
+    <div class="form-group  ">
+      <input type="search" name="search" placeholder="Search here by name or email" id="" class="form-control mx-5 col-4" value="{{ $search}}" >
+      <button  class="btn btn-primary m-5">search</button>
+      <a href="{{ route('customer.data') }}">
+  <button type="button" class="btn btn-success">Reset</button>
+  </a>
     </div>
   </form>
   <a href="{{ route('customer.create') }}">
-  <button class="btn btn-success">Add Customer</button>
+  <button class="btn btn-success mx-5">Add Customer</button>
   </a>
   <a href="{{ route('customer.trash') }}">
-  <button class="btn btn-secondary">Go To Trash</button>
+  <button class="btn btn-secondary ">Go To Trash</button>
 
   </a>
     <thead>

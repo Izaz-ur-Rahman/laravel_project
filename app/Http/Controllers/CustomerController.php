@@ -37,7 +37,7 @@ class CustomerController extends Controller
       }
       else
       {
-         $customers = Customers::all();
+         $customers = Customers::paginate(10);
 
       }
       // select query are here
