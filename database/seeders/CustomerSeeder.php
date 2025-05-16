@@ -14,11 +14,14 @@ class CustomerSeeder extends Seeder
     public function run(): void
     {
         $faker = Faker::create();
-        $customer = new Customers;
-        $customer->name = $faker->name;
-        $customer->email = $faker->email;
-        $customer->password = $faker->password;
-        $customer->save();
+        for($i = 1; $i <= 100; $i++ )
+        {
+            $customer = new Customers;
+            $customer->name = $faker->name;
+            $customer->email = $faker->email;
+            $customer->password = $faker->password;
+            $customer->save();
+        }
 
     }
 }
