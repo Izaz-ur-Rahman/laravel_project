@@ -13,9 +13,7 @@
 
     <!-- Optional JavaScript -->
 <table class="table mx-5">
-    <pre>
 
-    </pre>
  <!-- #region -->
   <form action="">
     <div class="form-group  ">
@@ -69,6 +67,8 @@
         </tr>
         @endforeach
     </tbody>
+
 </table>
+
   </body>
 </html>
