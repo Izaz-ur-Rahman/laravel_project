@@ -19,7 +19,7 @@
  <!-- #region -->
   <form action="">
     <div class="form-group col-6">
-      <input type="search" name="search" placeholder="Search here by name or email" id="" class="form-control" >
+      <input type="search" name="search" placeholder="Search here by name or email" id="" class="form-control" value="{{ $search}}" >
       <button  class="btn btn-primary m-4">search</button>
 
     </div>
