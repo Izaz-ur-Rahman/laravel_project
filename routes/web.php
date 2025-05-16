@@ -65,26 +65,27 @@ Route::post('/register',[RegistrationController::class,'register']);
 
 Route::get('/register', [CustomerController::class, 'index']);
 
+Route::group(['prefix'=>'/customer'],function(){
 
-Route::get('/customer/view',[CustomerController::class,'view'])->name('customer.data');
-
-
-Route::get('/customer/trash',[CustomerController::class,'trash'])->name('customer.trash');
+        Route::get('/view',[CustomerController::class,'view'])->name('customer.data');
 
 
-Route::get('/customer/delete/{id}',[CustomerController::class,'delete'])->name('customer.delete');
-
-Route::get('/customer/force-delete/{id}',[CustomerController::class,'forceDelete'])->name('customer.force-delete');
-
-Route::get('/customer/restore/{id}',[CustomerController::class,'restore'])->name('customer.restore');
+        Route::get('/trash',[CustomerController::class,'trash'])->name('customer.trash');
 
 
-Route::get('/customer/edit/{id}',[CustomerController::class,'edit'])->name('customer.edit');
+        Route::get('/delete/{id}',[CustomerController::class,'delete'])->name('customer.delete');
+
+        Route::get('/force-delete/{id}',[CustomerController::class,'forceDelete'])->name('customer.force-delete');
+
+        Route::get('/restore/{id}',[CustomerController::class,'restore'])->name('customer.restore');
 
 
-Route::post('/customer/update/{id}',[CustomerController::class,'update'])->name('customer.update');
+        Route::get('/edit/{id}',[CustomerController::class,'edit'])->name('customer.edit');
 
 
+        Route::post('/update/{id}',[CustomerController::class,'update'])->name('customer.update');
+
+});
 Route::post('/register', [CustomerController::class, 'store'])->name('customer.create');
 
 Route::get('get-all-session',function(){
